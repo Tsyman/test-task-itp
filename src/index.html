@@ -1,0 +1,54 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div class="container">
+        <form id="sign-up" class="form">
+            <div class="form-header">
+                <h1>Sign Up</h1>
+                <button id="modal-button" type="button">?</button>
+            </div>
+            <div class="form-field">
+                <label for="username">Name:</label>
+                <input type="text" name="username" id="username" autocomplete="off" class="field">
+                <p class="field-error"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="off" class="field">
+                <p class="field-error"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Phone:</label>
+                <input id="phone" type="tel" name="phone" autocomplete="off" class="field"/>
+                <p class="field-error"></p>
+            </div>
+
+
+            <div class="form-field">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" autocomplete="off" class="field"></textarea>
+                <p class="field-error"></p>
+            </div>
+
+            <button type="submit" class="submit-button">
+                <span class="button-text">Sign Up</span>
+            </button>
+            <p class="form-response"></p>
+        </form>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <p>Text inside the modal</p>
+            <span class="close-button">&times;</span>
+        </div>
+    </div>
+  </body>
+</html>

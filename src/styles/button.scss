@@ -1,0 +1,66 @@
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: $button;
+  position: relative;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $white;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $button-hover;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: $button-hover;
+  }
+
+  .button-text {
+    color: $white;
+    transition: all 0.2s;
+  }
+
+  &.button-loading {
+    .button-text {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: 4px solid transparent;
+      border-top-color: $white;
+      border-radius: 50%;
+      animation: button-loading-spinner 1s ease infinite;
+    }
+  } 
+}
+
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}

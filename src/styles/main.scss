@@ -1,0 +1,96 @@
+@import "./normalize.scss";
+@import "./variables.scss";
+@import "./modal.scss";
+@import "./button.scss";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: $white;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px $box-shadow;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form {
+  padding: 10px 20px;
+
+  .form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-field {
+    margin-bottom: 5px;
+
+    label {
+      display: block;
+      color: $text;
+      margin-bottom: 5px;
+    }
+
+    .field{
+      border: solid 2px $border;
+      border-radius: 3px;
+      padding: 10px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      display: block;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+        border-color: $border-focus;
+      }
+    }
+
+    &.error .field {
+      border-color: $error;
+    }
+
+    &.success .field {
+      border-color: $success;
+    }
+
+    #message {
+      resize: none;
+      outline: none;
+    }
+
+    .field-error {
+      color: $error;
+      text-transform: capitalize;
+    }
+  }
+
+  .form-response {
+    text-align: center;
+    margin-top: 10px;
+
+    &.error {
+      color: $error;
+    }
+
+    &.success {
+      color: $success;
+    }
+  }
+}
